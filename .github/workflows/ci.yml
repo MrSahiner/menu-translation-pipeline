@@ -1,0 +1,24 @@
+# Her push ve pull request'te derleme ile birim ve entegrasyon testleri.
+# Entegrasyon testleri Testcontainers ile PostgreSQL ve Redis kapsayıcılarını kendisi açar (runner'da Docker var).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build
+        run: dotnet build MenuTranslation.slnx --configuration Release
+
+      - name: Test
+        run: dotnet test MenuTranslation.slnx --configuration Release --no-build

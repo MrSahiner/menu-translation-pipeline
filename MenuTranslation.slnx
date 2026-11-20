@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MenuTranslation.Api/MenuTranslation.Api.csproj" />
+    <Project Path="src/MenuTranslation.Application/MenuTranslation.Application.csproj" />
+    <Project Path="src/MenuTranslation.Domain/MenuTranslation.Domain.csproj" />
+    <Project Path="src/MenuTranslation.Infrastructure/MenuTranslation.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MenuTranslation.IntegrationTests/MenuTranslation.IntegrationTests.csproj" />
+    <Project Path="tests/MenuTranslation.UnitTests/MenuTranslation.UnitTests.csproj" />
+  </Folder>
+</Solution>
